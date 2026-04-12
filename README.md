@@ -12,7 +12,7 @@ Based on: https://www.infoq.com/articles/build-a-container-golang/
     go build -o byoContainerGo ./cmd/byocontainer/
     sudo ./byoContainerGo run /bin/bash
 
-## Week 1 — Sprint 1 Review ✓
+## Week 1 — Sprint 1 Review ✓[DONE]
 
 ### Tests passing
 - TestDefaultFlagsIncludesUTS — PASS
