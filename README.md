@@ -1,6 +1,6 @@
 # byoContainerGo
 
-A minimal Linux container runtime built in Go.
+A minimal Linux container runtime built in Go with less than 100 lines.
 Based on: https://www.infoq.com/articles/build-a-container-golang/
 
 ## Requirements
