@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
+	"syscall"
 )
 
 func Child(args []string) {
@@ -15,6 +16,19 @@ func Child(args []string) {
 	if err := cmd.Run(); err != nil {
 		fmt.Fprintln(os.Stderr, "ERROR:", err)
 		os.Exit(1)
+	}
+}
+
+func setupFilesystem() {
+	must(syscall.Mount("rootfs", "rootfs", "", syscall.MS_BIND, ""))
+	must(os.MkdirAll("rootfs/oldrootfs", 0700))
+	must(syscall.PivotRoot("rootfs", "rootfs/oldrootfs"))
+	must(os.Chdir("/"))
+}
+
+func must(err error) {
+	if err != nil {
+		panic(err)
 	}
 }
 
