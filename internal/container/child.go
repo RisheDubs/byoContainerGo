@@ -22,7 +22,7 @@ func setupFilesystem() {
 	must(syscall.Mount("rootfs", "rootfs", "", syscall.MS_BIND, ""))
 	must(os.MkdirAll("rootfs/oldrootfs", 0700))
 	must(syscall.PivotRoot("rootfs", "rootfs/oldrootfs"))
-	must(os.Chdir("/"))
+	
 }
 
 func must(err error) {
