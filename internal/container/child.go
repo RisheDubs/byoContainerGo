@@ -16,7 +16,7 @@ func Child(args []string) {
 
 	if err := cmd.Run(); err != nil {
 		fmt.Fprintln(os.Stderr, "ERROR:", err)
-		os.Exit(1)
+		
 	}
 }
 
