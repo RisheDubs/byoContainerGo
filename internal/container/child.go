@@ -21,8 +21,3 @@ func Child(args []string) {
 }
 
 
-func must(err error) {
-	if err != nil {
-		panic(err)
-	}
-}
