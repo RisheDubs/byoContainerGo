@@ -14,8 +14,7 @@ func Child(args []string) {
 	cmd.Stdin = os.Stdin
 	cmd.Stderr = os.Stderr
 
-	if err := cmd.Run(); err != nil {
-		fmt.Fprintln(os.Stderr, "ERROR:", err)
+	
 		
 	}
 }
