@@ -2,7 +2,6 @@ package container
 
 import (
 	"fmt"
-	"os"
 	"os/exec"
 	"syscall"
 )
