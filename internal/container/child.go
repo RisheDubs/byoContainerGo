@@ -11,7 +11,7 @@ func Child(args []string) {
 
 	cmd := exec.Command(args[0], args[1:]...)
 	cmd.Stdin = os.Stdin
-	cmd.Stderr = os.Stderr
+	
 
 	
 		
